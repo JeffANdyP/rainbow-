@@ -1,18 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function ColorBlock(props){
-    let [input, setInput] = useState('')
-
     return (
-        <div>
-            <form>
-                <input type="text" 
-                onChange={(e) => setInput(e.target.value)} />
-                <button type="submit">Submit!</button>
-            </form>
+        <div className="colorBlock"
+        style={{'backgroundColor': props.color}}>
+            <p>{props.color}</p>
         </div>
     )
 }
 
-
+// Do not forget to export your component once you have built it!
 export default ColorBlock
